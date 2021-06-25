@@ -1,0 +1,33 @@
+Launch an instance
+Select IAM role wiht AmazonEC2RoleforAWSCodeDeploy
+Tag the instance
+Create EC2 Application
+Create Deployment group
+
+
+sudo yum install -y ruby wget
+wget https://aws-codedeploy-eu-west-1.s3.eu-west-1.amazonaws.com/latest/install
+chmod +x ./install
+sudo ./install auto
+sudo service codedeploy-agent status
+aws configure list
+aws configure
+************************************************************************************
+AWS Access Key ID [None]: 
+AWS Secret Access Key [None]: 
+Default region name [None]: us-east-1
+Default output format [None]: json
+************************************************************************************
+aws s3 ls
+aws s3api create-bucket --bucket <bucket name> --region us-east-1
+aws s3api put-bucket-versioning --bucket <bucket name> --versioning-configuration Status=Enabled
+
+sudo yum install git -y
+git clone <repo>
+CodeDeploy username: Admin-at-383743430133
+CodeDeploy passwor: jcZU8rXLXncGo7yjmqNBIX7U9ZVxb47Y2iirCMAGSKA=
+cd <repo>
+
+aws deploy push --application-name pythonapp --ignore-hidden-files --s3-location s3://<bucket name>/app.zip
+
+Create Deployment

@@ -1,0 +1,24 @@
+Creater a user and download the credentials
+Generate HTTPS Git credentials for the user
+Sign in as the IAM user
+Create a repo 
+Open Git bash and clone HTTPS
+***********************************************
+# CodeCommit Helper
+git config --global credential.helper '!aws codecommit credential-helper $@'
+git config --global credential.UseHttpPath true
+***********************************************
+Add files to the repo
+***********************************************
+# Working with Git
+git config --global user.name <username>
+git config --global user.email <example@gmail.com>
+git status
+git add .
+git commit -m "comment"
+git push
+git log --oneline
+git branch
+git checkout
+***********************************************
+Create CodeBuild
