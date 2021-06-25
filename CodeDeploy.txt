@@ -24,10 +24,10 @@ aws s3api put-bucket-versioning --bucket <bucket name> --versioning-configuratio
 
 sudo yum install git -y
 git clone <repo>
-CodeDeploy username: Admin-at-383743430133
-CodeDeploy passwor: jcZU8rXLXncGo7yjmqNBIX7U9ZVxb47Y2iirCMAGSKA=
+CodeDeploy username: 
+CodeDeploy passwor: 
 cd <repo>
 
-aws deploy push --application-name pythonapp --ignore-hidden-files --s3-location s3://<bucket name>/app.zip
+aws deploy push --application-name <app name> --ignore-hidden-files --s3-location s3://<bucket name>/app.zip
 
 Create Deployment
